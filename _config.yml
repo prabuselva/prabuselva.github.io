@@ -16,13 +16,13 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Site Title"
+title                    : "Prabu Selvaraj's Website"
 title_separator          : "-"
-name                     : "Your Name"
-description              : "An amazing website."
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+name                     : "Prabu Selvaraj"
+description              : "Here I scrible my random thoughts and works."
+url                      : "https://prabuselva.github.com" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+baseurl                  : "/blog" # the subpath of your site, e.g. "/blog"
+repository               : "prabuselva/prabuselva.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
@@ -38,9 +38,9 @@ comments:
     # https://developers.facebook.com/docs/plugins/comments
     appid                :
     num_posts            : # 5 (default)
-    colorscheme          : # "light" (default), "dark"
+    colorscheme          : dark # "light" (default), "dark"
   utterances:
-    theme                : # "github-light" (default), "github-dark"
+    theme                : githu-dark # "github-light" (default), "github-dark"
     issue_term           : # "pathname" (default)
 staticman:
   allowedFields          : # ['name', 'email', 'url', 'message']
@@ -64,9 +64,9 @@ reCaptcha:
   secret                 :
 atom_feed:
   path                   : # blank (default) uses feed.xml
-search                   : # true, false (default)
-search_full_content      : # true, false (default)
-search_provider          : # lunr (default), algolia, google
+search                   : true # true, false (default)
+search_full_content      : true # true, false (default)
+search_provider          : lunr # lunr (default), algolia, google
 algolia:
   application_id         : # YOUR_APPLICATION_ID
   index_name             : # YOUR_INDEX_NAME
@@ -106,10 +106,10 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "Prabu Selvaraj"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an amazing person."
-  location         : "Somewhere"
+  bio              : "I am an Embedded Firmware/Software Engineer with wide Networking knowledge."
+  location         : "Singapore"
   email            :
   links:
     - label: "Email"
