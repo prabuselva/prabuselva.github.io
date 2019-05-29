@@ -76,7 +76,7 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 : "/assets/images/bio-photo.jpg"
+og_image                 : "/assets/images/my-photo2.jpg"
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -94,8 +94,8 @@ analytics:
 # Site Author
 author:
   name             : "Prabu Selvaraj"
-  avatar           : "/assets/images/bio-photo.jpg"
-  bio              : "I am an Embedded Firmware/Software Engineer. Passionate about FOSS, Image/Video Processing, Robotics, AI, IOT, Neural Networks, Data science, Opensource hardware platforms"
+  avatar           : "/assets/images/my-photo2.jpg"
+  bio              : "An Embedded Firmware & Software Engineer. Passionate about FOSS, Image/Video Processing, Robotics, IOT, Sensors, AI, Neural Networks, Data science, Opensource hardware platforms"
   location         : "Singapore"
   links:
     - label: "Website"
