@@ -2,12 +2,13 @@
 title: "Apache Web Server Mod Proxy"
 related: true
 categories:
-  - Web Service
-  - Computer Tricks
+  - linux
+  - hacks
 tags:
   - Apache
   - httpd
   - proxy
+  - linux
 toc: true  
 ---
 
