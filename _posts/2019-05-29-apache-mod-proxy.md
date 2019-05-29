@@ -19,15 +19,17 @@ I was required to setup an proxy a HTTP link to a web service running in another
 
 ## Flow Diagram
 
-```
-Client Machine <---> Server Machine (Proxy to) <---> Remote Machine (Running the actual web service)
+```shell
+Client  <-----> Server  <-----> Remote
+Machine         Machine         Machine
+(HTTP request)  (Proxy to)     (Actual web service)
 ```
 
 ## Mod Proxy Setup
 
 First setup the Apache httpd to enable mod_proxy and mod_ssl based on the linux distribution we use.
 
-```
+```shell
 ---------------  On Debian based systems ---------------
 $ apache2ctl -t -D DUMP_MODULES   
 OR
@@ -45,7 +47,7 @@ $ apache2ctl -M
 
 After ensuring mod proxy is configured properly, we can write the configuration of mod_proxy.conf as follows,
 
-```
+```shell
 <IfModule mod_proxy.c>
 
 ProxyRequests Off
