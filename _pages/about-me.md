@@ -5,15 +5,16 @@ permalink: /about-me/
 
 <div style="text-align: justify">
 
-I am Prabu Selvaraj, who is yet another Firmware & Software Developer among million other developers around the world. I was born in India. I did my Bachelor's Degree in Anna University, Chennai, India. Later, I pursued my Master's Degree in Nanyang Technological University, Singapore. My Master's thesis title was Robot Localization. During my Master's thesis, I started learning more about Robotics, Computer Vision, Machine Learning. Later, I started my career as a Firmware developer for Networking firm which I developed Video Surveillance Systems & Wireless Access points. I was one of the main developers who started the Video Recorder Development from scratch. Later, I started working in IoT (Internet of Things) Sensor development company where I developed very small wireless IoT Sensors used in Building Management systems. Currently, the things that interests me most are,
-
+I am Prabu Selvaraj, a Firmware & Software Developer. I started my career as a Firmware developer for a Networking firm where I was actively involved in the development of Video Surveillance Systems & Wireless Access points. Later, I started working in IoT Sensor development company where I developed embedded wireless IoT Sensors used in Building Management systems. Currently, the things that interests me most are,
+Actively following trends in Computer Vision, Machine learning, Internet Of Things (IoT), Embedded Systems, Edge Computing.
 </div>
 
-* Image/Video Processing
+* Image/Video Processing/Computer Vision
 * Robotics
-* Sensors
-* IoT Boards
+* Embedded Systems & Sensors
+* Internet Of Things (IoT) Boards
 * Tinkering Single Board Computer (SBCs)
 * Wireless Networks (802.11 or 802.15.4 Thread Mesh)
 * Data Science
 * Deep Learning (CNN/RNN)
+* Edge Computing
