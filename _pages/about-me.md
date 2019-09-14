@@ -6,7 +6,6 @@ permalink: /about-me/
 <div style="text-align: justify">
 
 I am Prabu Selvaraj, a Firmware & Software Developer. I started my career as a Firmware developer for a Networking firm where I was actively involved in the development of Video Surveillance Systems & Wireless Access points. Later, I started working in IoT Sensor development company where I developed embedded wireless IoT Sensors used in Building Management systems. Currently, the things that interests me most are,
-Actively following trends in Computer Vision, Machine learning, Internet Of Things (IoT), Embedded Systems, Edge Computing.
 </div>
 
 * Image/Video Processing/Computer Vision
