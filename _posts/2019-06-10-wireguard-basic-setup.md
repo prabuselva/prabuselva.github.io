@@ -56,6 +56,7 @@ $ apt-get install wireguard
 * Generate the required keys first
 
 #### Server
+
 ```shell
 # Generate public key first
 $ wg genkey > pubkey
@@ -66,6 +67,7 @@ $ wg genpsk > preshared
 ```
 
 #### Client
+
 ```shell
 # Generate public key first
 $ wg genkey > pubkey
@@ -74,16 +76,19 @@ $ wg genkey | tee privatekey | wg pubkey > publickey
 # Optional - generate pre-shared genkey
 $ wg genpsk > preshared
 ```
+
 * Create the configuration file as follows
 
-#### Server
+#### Server Configuration File
+
 ```shell
 /etc/wireguard/wg0.conf
 ------------------------------------
 [Interface]
-Address = 10.20.20.1/24
+# IPV4 or IPV6 Only or Both IP can be provided
+Address = 10.20.20.1/24, fd24:24:24::1/64
 SaveConfig = true
-ListenPort = 51820
+ListenPort = 41800
 PrivateKey = [SERVER PRIVATE KEY]
 # MTU can be adjusted to improve VPN performance
 MTU = 1420
@@ -91,35 +96,44 @@ MTU = 1420
 PostUp = echo 1 > /proc/sys/net/ipv4/ip_forward
 PostUp = iptables -A FORWARD -i %i -j ACCEPT; iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 PostDown = iptables -D FORWARD -i %i -j ACCEPT; iptables -t nat -D POSTROUTING -o eth0 -j MASQUERADE
+# Note - IF IPV6 settings are required and ipv6 address is provided by your ISP
+# This can be used to provide IPV6 tunnel through IPV4 protocol at the client
+# Ensure the below settings are providedused for IPV6
+PostUp = echo 1 > /proc/sys/net/ipv6/conf/all/forwarding
+PostUp = echo 2 > /proc/sys/net/ipv6/conf/all/accept_ra; echo 2 > /proc/sys/net/ipv6/conf/eth0/accept_ra; echo 2 > /proc/sys/net/ipv6/conf/wg0/accept_ra
+PostUp = iptables -A FORWARD -i %i -j ACCEPT; iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+PostUp = ip6tables -A FORWARD -i %i -j ACCEPT; ip6tables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 
 [Peer]
 # client foo
 PublicKey = [FOOs PUBLIC KEY]
 PresharedKey = [PRE-SHARED KEY]
-AllowedIPs = 10.20.20.2/32
+AllowedIPs = 10.20.20.2/32, fd24:24:24::2/64
 
 [Peer]
 # client bar
 PublicKey = [BARs PUBLIC KEY]
-AllowedIPs = 10.20.20.3/32
+AllowedIPs = 10.20.20.3/32, fd24:24:24::3/64
 ```
-#### Client
+
+#### Client Configutration File
 
 ```shell
 foo.conf
 
 [Interface]
-Address = 10.20.20.2/24
+Address = 10.20.20.2/24, fd24:24:24::2/64
 PrivateKey = [FOOs PRIVATE KEY]
-DNS = 10.20.20.1
+DNS = 10.20.20.1, fd24:24:24::1/64
 
 [Peer]
 PublicKey = [SERVER PUBLICKEY]
 PresharedKey = [PRE-SHARED KEY]
 AllowedIPs = 0.0.0.0/0, ::/0
 # Endpoint should be the public ip address or DNS
-Endpoint = my.ddns.address.com:51820
+Endpoint = my.ddns.address.com:41800
 ```
+
 * The above setup has been setup in my Orangepi Board with buildroot based linux system and tested.
 
 * The performance is quite good. I was able achieve upto 140Mbps throughput on a 300Mbps connection.
