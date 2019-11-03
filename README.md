@@ -1,1 +1,1 @@
-This is my personal website github code 
+This is my personal website github code where I scribble my random ideas and hobby projects
