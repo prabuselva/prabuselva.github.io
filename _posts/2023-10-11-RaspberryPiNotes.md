@@ -46,7 +46,7 @@ $ ffmpeg -f pulse -i bluez_source.FF_FF_FF_FF_FF_FF.handsfree_head_unit -ac 1 ou
 $ ffplay output.m4a
 ```
 
-# Bluetooth Key Press 
+## Bluetooth Key Press 
 * To get the Bluetooth Key/Touch press, use the following,
   
 ```shell
